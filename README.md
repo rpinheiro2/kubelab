@@ -20,4 +20,4 @@ This command will build the Docker image using the Dockerfile and deploy the k8s
 
 <h2>Testing</h2>
 
-To test the deployment you can run curl -v local.ecosia.org/tree -H "host:local.ecosia.org" in a CMD prompt
+To test the deployment you can run ```curl -v localhost/tree -H "host:local.ecosia.org"``` in a CMD prompt

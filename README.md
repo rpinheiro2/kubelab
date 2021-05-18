@@ -1,7 +1,7 @@
 <h1>Documentation</h1>
 
 The present repository contains the source code of the deployment of a simple python web-server.
-It was built using Docker Desktop 20.10.6 and Kubernetes v1.19.7, in a Windows 2010 Pro workstation.
+It was built using Docker Desktop 20.10.6 and Kubernetes v1.19.7, in a Windows 10 Pro workstation.
 
 <h1>Pre-requisites</h1>
 

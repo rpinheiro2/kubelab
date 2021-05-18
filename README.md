@@ -12,7 +12,8 @@ So, you must copy the k8s (containing manifest_k8s.yaml) and web-server (contain
 
 With the directories copied to yhe local machine, run:
 
-docker build --tag ecosia/python-docker:0.0.1 && \  kubectl apply -f k8s\manifest_k8s.yaml
+'''docker build --tag ecosia/python-docker:0.0.1 && \
+kubectl apply -f k8s\manifest_k8s.yaml'''
 
 This command will build the Docker image using the Dockerfile and deploy the k8s manifest, to create and configure: namespace, deployment, service and ingress.
 

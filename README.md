@@ -1,21 +1,21 @@
-<h1>Web-server Deployment</h1>
+<h1>Documentation</h1>
 
 The present repository contains the source code of the deployment of a simple python web-server.
 It was built using Docker Desktop 20.10.6 and Kubernetes v1.19.7, in a Windows 2010 Pro workstation.
 
-<h1>Documentation</h1>
+<h1>Pre-requisites</h1>
 
 As requested,  the docker image was built locally, using the Docker Desktop. It´s possible to use `eval $(minikube docker-env)` to set docker-daemon locally using Minikube only in Linux, because this command doens´t work in Windows machines.
+So, you must copy the k8s (containing manifest_k8s.yaml) and web-server (containing the files: app.py, requirements.txt and Dockerfile) directories to the local machine.
 
-<h2>Creating the Docker image</h2>
-The directory web-server (containing the files: app.py, requirements.txt and Dockerfile) must be copied to the local machine.
-After that, you will run docker build --tag ecosia/python-docker:0.0.1, to build the  
+<h2>Deployment</h2>
 
-<h2>Setting kubernetes manifest</h2>
+With the directories copied to yhe local machine, run:
 
-In order to create the kubernetes resources you must copy the directory k8s (containing manifest_k8s.yaml) to the local machine.
+docker build --tag ecosia/python-docker:0.0.1 && \
+kubectl apply -f k8s\manifest_k8s.yaml
 
-To create resources run: kubectl apply -f .k8s\manifest_k8s.yaml, that will create and configure: namespace, deployment, service and ingress.
+This command will build the Docker image usil the Dockerfile and deploy the k8s manifest, to create and configure: namespace, deployment, service and ingress.
 
 <h2>Testing</h2>
 

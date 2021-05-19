@@ -7,7 +7,10 @@ It was built using Docker Desktop 20.10.6 and Kubernetes v1.19.7, in a Windows 1
 
 As requested,  the docker image was built locally, using the Docker Desktop. It´s possible to use `eval $(minikube docker-env)` to set docker-daemon locally using Minikube only in Linux, because this command doens´t work in Windows machines.
 So, you must copy the k8s (containing manifests-k8s.yaml) and python-docker (containing the files: app.py, requirements.txt and Dockerfile) directories to the local machine.
-
+Furthermore, you will need to set up an Ingreee Controller, using:
+```
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.46.0/deploy/static/provider/cloud/deploy.yaml && \
+```
 <h2>Deployment</h2>
 
 With the directories copied to yhe local machine, run:
